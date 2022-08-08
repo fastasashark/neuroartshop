@@ -62,10 +62,11 @@ $(document).ready(function(){
 		$('body').removeClass('oh');
     });
 
-	
-
-
-
+	$(document).on("click", ".min_filter", function () {
+		let fid = $(this).data('fid');
+        $('#'+fid).toggleClass('vis-min');
+        $('body').addClass('oh');
+	});
 	$('#f5_min').click(function(){
         $('#f5').toggleClass('vis-min');
         $('body').addClass('oh');
